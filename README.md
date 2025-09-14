@@ -38,16 +38,14 @@ Portfolio personal desarrollado con **Angular 20.3.0** que muestra mi experienci
 
 ## 📸 Capturas de Pantalla
 
-### 🖥️ Desktop
-![Desktop View](docs/screenshots/desktop.png)
+| 🖥️ Desktop | 📱 Mobile | 🌙 Modo Oscuro |
 
-### 📱 Mobile
-![Mobile View](docs/screenshots/mobile.png)
+<p align="center">
+  <img src="docs/Desktop.png" alt="Desktop View" width="70"/>
+  <img src="docs/Mobile.png" alt="Mobile View" width="20"/>
+  <img src="docs/DarkMode.png" alt="Dark Mode View" width="150"/>
+</p>
 
-### 🌙 Modo Oscuro
-![Dark Mode](docs/screenshots/dark-mode.png)
-
-> **Nota**: Agrega capturas de pantalla en la carpeta `docs/screenshots/`
 
 ## 🛠️ Tecnologías Utilizadas
 
