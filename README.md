@@ -36,15 +36,13 @@ Portfolio personal desarrollado con **Angular 20.3.0** que muestra mi experienci
 
 > **Nota**: Reemplaza la URL con tu dominio real cuando esté desplegado.
 
-## 📸 Capturas de Pantalla
+## 📸 Capturas de Pantalla.
+
 
 | 🖥️ Desktop | 📱 Mobile | 🌙 Modo Oscuro |
+|------------|-----------|----------------|
+| <img src="docs/Desktop.png" alt="Desktop View" width="150"/> | <img src="docs/Mobile.png" alt="Mobile View" width="30"/> | <img src="docs/DarkMode.png" alt="Dark Mode View" width="150"/> |
 
-<p align="center">
-  <img src="docs/Desktop.png" alt="Desktop View" width="70"/>
-  <img src="docs/Mobile.png" alt="Mobile View" width="20"/>
-  <img src="docs/DarkMode.png" alt="Dark Mode View" width="150"/>
-</p>
 
 
 ## 🛠️ Tecnologías Utilizadas
@@ -70,7 +68,7 @@ Portfolio personal desarrollado con **Angular 20.3.0** que muestra mi experienci
 
 ## 🚀 Instalación y Configuración
 
-### Prerrequisitos
+### Pre-requisitos
 - Node.js 18+ 
 - npm 9+
 - Angular CLI 20.2.1+
@@ -237,10 +235,6 @@ export const environment = {
 };
 ```
 
-**Nota**: EmailJS está configurado directamente en el servicio con:
-- Service ID: `service_71n6aof`
-- Template ID: `template_fbyizub`
-- Public Key: `VKK1bOMx-UIll-q1F`
 
 ## 📊 Performance
 
@@ -393,21 +387,6 @@ Si encuentras algún problema, por favor:
 2. Busca en [Issues existentes](https://github.com/Ludmimar/portfolio-angular/issues)
 3. Crea un [nuevo issue](https://github.com/Ludmimar/portfolio-angular/issues/new) con detalles del problema
 
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para contribuir:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-### Guías de contribución
-- Sigue las convenciones de código existentes
-- Agrega tests para nuevas funcionalidades
-- Actualiza la documentación si es necesario
-- Asegúrate de que todos los tests pasen
 
 ## 🙏 Reconocimientos
 
@@ -417,10 +396,6 @@ Las contribuciones son bienvenidas. Para contribuir:
 - [Google Fonts](https://fonts.google.com/) - Tipografías
 - [Unsplash](https://unsplash.com/) - Imágenes de referencia
 - Inspiración de diseño de [Dribbble](https://dribbble.com/) y [Behance](https://behance.net/)
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ## 📞 Contacto
 
