@@ -1,0 +1,32 @@
+/* ====== Passions Component Styles ====== */
+
+/* Dark Mode Styles */
+[data-theme="dark"] .gusto-card {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .gusto-card:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  transform: translateY(-5px);
+}
+
+[data-theme="dark"] .gusto-card h3 {
+  color: var(--text, #e8e8e8);
+}
+
+[data-theme="dark"] .gusto-card i,
+[data-theme="dark"] .gusto-card img {
+  color: var(--primary, #ff7bac);
+}
+
+/* Animación mejorada para las cards de pasiones */
+.gusto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gusto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}

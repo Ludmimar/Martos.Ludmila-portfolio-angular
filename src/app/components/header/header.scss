@@ -1,0 +1,134 @@
+/* Estilos específicos para el header */
+
+/* Botón de tema para desktop */
+.desktop-theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* Botón de tema dentro del menú hamburguesa */
+.theme-toggle-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  margin-top: 0.5rem;
+}
+
+[data-theme="dark"] .theme-toggle-item {
+  border-top: 1px solid #4a1a2a;
+}
+
+/* Ajustes para el botón de tema en el menú móvil */
+.theme-toggle-item app-theme-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos responsivos para el menú hamburguesa */
+@media (min-width: 769px) {
+  .theme-toggle-item {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-theme-toggle {
+    display: none;
+  }
+}
+
+/* Estilos para el botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación de X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mostrar hamburguesa en móvil */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ====== Hero Section Styles ====== */
+.hero {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem 0 3rem 0;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffb3c1;
+  box-shadow: 0 4px 12px rgba(255, 179, 193, 0.3);
+  transform: scale(.9);
+  opacity: 0;
+  animation: pop 900ms .4s forwards;
+}
+
+[data-theme="dark"] .profile {
+  border: 4px solid #ff7bac;
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.4);
+}
+
+@keyframes pop {
+  to { transform: scale(1); opacity: 1; }
+}
+
+.hero h1 {
+  margin: .75rem 0 0 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+}
+
+.hero p {
+  max-width: 680px;
+  margin: .5rem auto 1rem auto;
+  opacity: .95;
+}
+
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin-top: .5rem;
+}

@@ -1,0 +1,153 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Incubadora NOC",
+      "description": "Plataforma para gestionar cursos, alumnos y pagos. Proyecto Bootcamp Santex.",
+      "stack": "Angular · SCSS · Node.js · Express · Sequelize · MySQL",
+      "image": "assets/img/incubadora.png",
+      "githubLink": "https://github.com/Ludmimar/Incubadora_Noc",
+      "demoLink": null,
+      "featured": true,
+      "category": "fullstack",
+      "technologies": ["Angular", "SCSS", "Node.js", "Express", "Sequelize", "MySQL"],
+      "status": "completed",
+      "date": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "title": "Conversor de Moneda",
+      "description": "App en Java orientada a objetos para practicar lógica y POO.",
+      "stack": "Java · POO",
+      "image": "assets/img/conversor.png",
+      "githubLink": "https://github.com/Ludmimar/DesafioConversorDeMoneda",
+      "demoLink": null,
+      "featured": false,
+      "category": "backend",
+      "technologies": ["Java", "POO"],
+      "status": "completed",
+      "date": "2023-11-20"
+    },
+    {
+      "id": 3,
+      "title": "Beauty Shop",
+      "description": "Página de belleza desarrollada para practicar la implementación de un carrito de compras dinámico.",
+      "stack": "HTML · CSS · JS",
+      "image": "assets/img/beauty.jpg",
+      "githubLink": "https://github.com/Ludmimar/Actividad_Semana_04_Bam_2.0",
+      "demoLink": "https://ludmila-martos-beauty.netlify.app/",
+      "featured": true,
+      "category": "frontend",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "status": "completed",
+      "date": "2023-10-15"
+    },
+    {
+      "id": 4,
+      "title": "Gestión de Notas de Alumnos",
+      "description": "El programa permite cargar alumnos, calcular promedios, asignar condiciones y realizar búsquedas y modificaciones de notas de forma interactiva con la consola.",
+      "stack": "Python",
+      "image": "assets/img/Python-Emblem.png",
+      "githubLink": "https://github.com/Ludmimar/ISSD/tree/main/Programacion%201/Coloquio%20Promocional",
+      "demoLink": null,
+      "featured": false,
+      "category": "backend",
+      "technologies": ["Python"],
+      "status": "completed",
+      "date": "2023-09-10"
+    },
+    {
+      "id": 5,
+      "title": "Java Digitalers",
+      "description": "Proyectos realizados durante el cursado del programa FullStack Java",
+      "stack": "Java · Spring · HTML · CSS · JS",
+      "image": "assets/img/java.png",
+      "githubLink": "https://github.com/Ludmimar/Java-Digitalers/tree/main/Mod03-Proyecto%20Integrador%20Etapa%201%20-%2002",
+      "demoLink": "https://fintech-banco.netlify.app",
+      "featured": true,
+      "category": "fullstack",
+      "technologies": ["Java", "Spring", "HTML", "CSS", "JavaScript"],
+      "status": "completed",
+      "date": "2023-12-05"
+    },
+    {
+      "id": 6,
+      "title": "Codo a codo",
+      "description": "Landing page interactiva que permite explorar diferentes cursos de formación en línea.",
+      "stack": "HTML · CSS · JS",
+      "image": "assets/img/salus.jpg",
+      "githubLink": "https://github.com/Ludmimar/CodoaCodo-Grupo01",
+      "demoLink": "https://ludmimar.github.io/CodoaCodo-Grupo01",
+      "featured": false,
+      "category": "frontend",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "status": "completed",
+      "date": "2023-08-20"
+    },
+    {
+      "id": 7,
+      "title": "Desafio-Java",
+      "description": "Aplicación en Java que consume la API pública Gutendex para explorar el catálogo de libros de Project Gutenberg.",
+      "stack": "JAVA",
+      "image": "assets/img/java.png",
+      "githubLink": "https://github.com/Ludmimar/Desafio-Java-trabajando-con-lambdas-streams-y-Spring-Framework",
+      "demoLink": null,
+      "featured": false,
+      "category": "backend",
+      "technologies": ["Java", "Spring", "API"],
+      "status": "completed",
+      "date": "2024-02-10"
+    },
+    {
+      "id": 8,
+      "title": "Encriptador de texto",
+      "description": "Aplicación web en JavaScript que encripta y desencripta textos usando reglas de sustitución, con posibilidad de copiar el resultado al portapapeles. Proyecto pensado para practicar manipulación del DOM, uso de expresiones regulares, eventos en botones y diseño responsive con CSS.",
+      "stack": "HTML · CSS · JS",
+      "image": "assets/img/encriptador.jpg",
+      "githubLink": "https://github.com/Ludmimar/Encriptador-de-Texto/tree/main?tab=readme-ov-file",
+      "demoLink": "https://ludmimar.github.io/Encriptador-de-Texto/",
+      "featured": true,
+      "category": "frontend",
+      "technologies": ["HTML", "CSS", "JavaScript", "DOM"],
+      "status": "completed",
+      "date": "2023-07-15"
+    },
+    {
+      "id": 9,
+      "title": "Proyecto: API REST Portfolio Personal",
+      "description": "El proyecto implementa un sistema CRUD completo para administrar: ->Personas: datos personales y perfil. ->Educación: registros académicos. ->Experiencia: proyectos y experiencia laboral.",
+      "stack": "Java · SpringBoot · MySQL",
+      "image": "assets/img/java.png",
+      "githubLink": "https://github.com/Ludmimar/Argentina-Programa-MyPortfolio-Backend",
+      "demoLink": null,
+      "featured": true,
+      "category": "backend",
+      "technologies": ["Java", "SpringBoot", "MySQL", "REST API"],
+      "status": "completed",
+      "date": "2024-03-01"
+    }
+  ],
+  "categories": [
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "description": "Proyectos de interfaz de usuario"
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "description": "Proyectos de servidor y APIs"
+    },
+    {
+      "id": "fullstack",
+      "name": "Full Stack",
+      "description": "Proyectos completos frontend + backend"
+    }
+  ],
+  "technologies": [
+    "Angular", "React", "Vue", "HTML", "CSS", "JavaScript", "TypeScript",
+    "Java", "Spring", "SpringBoot", "Node.js", "Express", "Python",
+    "MySQL", "PostgreSQL", "MongoDB", "Sequelize", "JPA", "REST API",
+    "SCSS", "Bootstrap", "Tailwind", "Figma", "Git", "Docker"
+  ]
+}

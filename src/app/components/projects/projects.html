@@ -1,0 +1,104 @@
+<!-- Proyectos -->
+<section id="proyectos" class="container">
+  <h2 class="reveal"><i class="fa-solid fa-laptop-code"></i> Proyectos</h2><br>
+  <p class="muted reveal"><strong>Cada proyecto cuenta una parte del viaje: práctica, colaboración y entrega de valor.</strong></p>
+  
+  <!-- Filtros de categorías -->
+  <div class="project-filters reveal">
+    <button 
+      [class.active]="selectedCategory === 'all'"
+      (click)="filterProjectsByCategory('all')"
+      class="filter-btn">
+      Todos
+    </button>
+    <button 
+      *ngFor="let category of categories; trackBy: trackByCategoryId"
+      [class.active]="selectedCategory === category.id"
+      (click)="filterProjectsByCategory(category.id)"
+      class="filter-btn">
+      {{ category.name }}
+    </button>
+  </div>
+  
+  <!-- Loading state -->
+  <div *ngIf="isLoading" class="loading-state">
+    <div class="spinner"></div>
+    <p>Cargando proyectos...</p>
+  </div>
+  
+  <div class="projects" *ngIf="!isLoading">
+    <article 
+      *ngFor="let project of getFilteredProjects(); trackBy: trackByProjectId" 
+      class="card reveal" 
+      [attr.data-title]="project.title"
+      [attr.data-desc]="project.description"
+      [attr.data-stack]="project.stack"
+      [attr.data-link]="project.githubLink"
+      [attr.data-demo]="project.demoLink"
+      [attr.aria-label]="'Proyecto: ' + project.title + '. Click para ver detalles'"
+      [attr.tabindex]="0"
+      [attr.role]="'button'"
+      (click)="openModal(project)"
+      (keydown.enter)="openModal(project)"
+      (keydown.space)="openModal(project)">
+      <div class="image-container">
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          [class]="isIconImage(project.image) ? 'icon-svg' : 'project-image'"
+          loading="lazy"
+          decoding="async"
+          (error)="onImageError($event, project)"
+          (load)="onImageLoad($event, project)"
+        />
+        <!-- Fallback para imágenes que no cargan -->
+        <div *ngIf="hasImageError(project)" class="image-fallback">
+          <i class="fa-solid fa-image"></i>
+          <span>{{ project.title }}</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-content">
+          <h3>{{ project.title }}</h3>
+          <p class="stack">{{ getShortDescription(project.description) }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="pill">{{ project.stack }}</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Modal Proyecto -->
+<div class="modal" id="modal" [class.show]="isModalOpen" [attr.aria-hidden]="!isModalOpen" role="dialog" aria-modal="true" [attr.aria-labelledby]="isModalOpen ? 'm-title' : null">
+  <div class="box">
+    <div class="box-head">
+      <h3 id="m-title">{{ selectedProject?.title }}</h3>
+      <button class="close" id="m-close" aria-label="Cerrar modal" (click)="closeModal()" (keydown.escape)="closeModal()">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="box-body">
+      <img
+        id="m-img"
+        [src]="selectedProject?.image || ''"
+        [alt]="selectedProject?.title || ''"
+        loading="eager"
+        decoding="sync"
+        (error)="onModalImageError($event)"
+      />
+      <p id="m-desc" style="margin:.6rem 0">{{ selectedProject?.description }}</p>
+      <p id="m-stack" class="muted">{{ selectedProject?.stack }}</p>
+      <p style="margin-top:.8rem">
+        <a id="m-link" class="btn" [href]="selectedProject?.githubLink" target="_blank">🔗 Ver en GitHub</a>
+        <a 
+          *ngIf="selectedProject?.demoLink" 
+          id="m-demo" 
+          class="btn demo" 
+          [href]="selectedProject?.demoLink" 
+          target="_blank">🌐 Ver Demo</a>
+      </p>
+    </div>
+  </div>
+</div>

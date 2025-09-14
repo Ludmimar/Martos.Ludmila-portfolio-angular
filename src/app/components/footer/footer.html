@@ -1,0 +1,66 @@
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <!-- Sección navegación - lado izquierdo -->
+    <div class="footer-nav">
+      <h4>Navegación</h4>
+      <div class="nav-links">
+        <a href="#historia" (click)="scrollToSection('historia')">
+          <i class="fa-solid fa-route"></i>
+          <span>Mi Historia</span>
+        </a>
+        <a href="#skills" (click)="scrollToSection('skills')">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Skills</span>
+        </a>
+        <a href="#proyectos" (click)="scrollToSection('proyectos')">
+          <i class="fa-solid fa-code"></i>
+          <span>Proyectos</span>
+        </a>
+        <a href="#futuro" (click)="scrollToSection('futuro')">
+          <i class="fa-solid fa-seedling"></i>
+          <span>Futuro</span>
+        </a>
+        <a href="#contacto" (click)="scrollToSection('contacto')">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Contacto</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección central - información personal y redes -->
+    <div class="footer-main">
+      <p>© 2025 · Portfolio de <strong>Ludmila Martos</strong></p>
+      <p class="made-with">Hecho con <i class="fa-solid fa-heart"></i> y <i class="fa-solid fa-mug-hot"></i></p>
+      <div class="footer-social">
+        <a href="https://github.com/Ludmimar" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ludmimar89/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:ludmilamartos@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección técnica - lado derecho -->
+    <div class="footer-technical">
+      <div class="tech-info">
+        <span class="tech-item">
+          <i class="fa-solid fa-code"></i>
+          <span>v{{ version }}</span>
+        </span>
+        <span class="tech-item">
+          <i class="fa-solid fa-calendar"></i>
+          <span>{{ lastUpdate }}</span>
+        </span>
+        <span class="tech-item">
+          <i class="fa-solid fa-cogs"></i>
+          <span>{{ technologies }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>

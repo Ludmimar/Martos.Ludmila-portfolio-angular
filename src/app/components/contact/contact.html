@@ -1,0 +1,71 @@
+<!-- Contacto -->
+<section id="contacto" class="container">
+  <h2 class="reveal">Contacto</h2><br>
+  <div class="contact">
+    <div class="reveal">
+      <p class="muted"><strong>¿Charlamos? Estoy abierta a colaborar en proyectos, prácticas y nuevas oportunidades </strong></p>
+      <div class="links" style="margin:.5rem 0 1rem 0">
+        <a class="cta" href="mailto:ludmilamartos@gmail.com">
+          <i class="fa-regular fa-paper-plane"></i> Email
+        </a>
+        <a class="cta" target="_blank" href="https://www.linkedin.com/in/ludmimar89">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+    <form id="contact-form" class="reveal" [formGroup]="contactForm" (ngSubmit)="onSubmit()" role="form" aria-label="Formulario de contacto">
+      <div *ngIf="errorMessage" class="error-message" role="alert" aria-live="polite">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success-message" role="alert" aria-live="polite">{{ successMessage }}</div>
+      
+      <div class="form-group">
+        <label for="name-input" class="sr-only">Nombre</label>
+        <input 
+          id="name-input"
+          type="text" 
+          formControlName="name" 
+          placeholder="Nombre" 
+          required 
+          [class.error]="getNameError()"
+          [attr.aria-invalid]="getNameError() ? 'true' : 'false'"
+          [attr.aria-describedby]="getNameError() ? 'name-error' : null"
+          (blur)="contactForm.get('name')?.markAsTouched()" />
+        <div *ngIf="getNameError()" class="field-error" id="name-error">{{ getNameError() }}</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email-input" class="sr-only">Email</label>
+        <input 
+          id="email-input"
+          type="email" 
+          formControlName="email" 
+          placeholder="Email" 
+          required 
+          [class.error]="getEmailError()"
+          [attr.aria-invalid]="getEmailError() ? 'true' : 'false'"
+          [attr.aria-describedby]="getEmailError() ? 'email-error' : null"
+          (blur)="contactForm.get('email')?.markAsTouched()" />
+        <div *ngIf="getEmailError()" class="field-error" id="email-error">{{ getEmailError() }}</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="message-input" class="sr-only">Mensaje</label>
+        <textarea 
+          id="message-input"
+          formControlName="message" 
+          rows="5" 
+          placeholder="Mensaje" 
+          required 
+          [class.error]="getMessageError()"
+          [attr.aria-invalid]="getMessageError() ? 'true' : 'false'"
+          [attr.aria-describedby]="getMessageError() ? 'message-error message-count' : 'message-count'"
+          (blur)="contactForm.get('message')?.markAsTouched()"></textarea>
+        <div *ngIf="getMessageError()" class="field-error" id="message-error">{{ getMessageError() }}</div>
+        <div class="char-count" id="message-count" aria-live="polite">{{ contactForm.get('message')?.value?.length || 0 }}/500</div>
+      </div>
+      
+      <button type="submit" [disabled]="isSubmitting || contactForm.invalid">
+        {{ isSubmitting ? 'Enviando...' : 'Enviar' }}
+      </button>
+    </form>
+  </div>
+</section>

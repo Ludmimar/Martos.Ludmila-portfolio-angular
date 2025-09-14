@@ -1,0 +1,40 @@
+/* ====== Skills Component Styles ====== */
+
+/* Dark Mode Styles */
+[data-theme="dark"] .skill-card {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .skill-title {
+  color: var(--text, #e8e8e8);
+}
+
+[data-theme="dark"] .badge {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  color: var(--text, #e8e8e8);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .badge:hover {
+  background: #4a1a2a;
+  border-color: #ff7bac;
+  color: #ffc7d2;
+  transform: translateY(-2px);
+}
+
+/* Animación suave para los badges */
+.badge {
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .badge:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}

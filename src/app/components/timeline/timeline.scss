@@ -1,0 +1,40 @@
+/* ====== Timeline Component Styles ====== */
+
+/* Dark Mode Styles */
+[data-theme="dark"] .t-icon {
+  background: #4a1a2a;
+  color: #ffc7d2;
+  border: 1px solid #5a1a2f;
+}
+
+[data-theme="dark"] .t-card {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .t-card h3 {
+  color: var(--text, #e8e8e8);
+}
+
+/* Animaciones mejoradas para la timeline */
+.t-item {
+  transition: transform 0.3s ease;
+}
+
+.t-item:hover {
+  transform: translateX(5px);
+}
+
+.t-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.t-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .t-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,595 @@
+/* ====== Projects Component Styles ====== */
+
+/* Filtros de proyectos */
+.project-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--primary, #ff7bac);
+  color: var(--primary, #ff7bac);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  background: var(--primary, #ff7bac);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--primary, #ff7bac);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.3);
+}
+
+/* Estado de carga */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--muted, #a68787);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary, #ff7bac);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Theme Colors - matching base CSS */
+:root { 
+  --grad-a: #ffccd9; /* rosa claro */
+  --grad-b: #ff99b2; /* rosa más intenso */ 
+  --grad-c: #ff7b9c; /* rosa fuerte */ 
+  --grad-d: #ffb3c1; /* pétalo */
+  
+  --text: #4d3a3a;     /* marrón suave para mejor lectura */
+  --muted: #a68787;    /* gris/marrón suave para subtítulos */
+  --bg: #fff6f9;       /* rosa muy suave de fondo general */
+  --card: #ffffff;      /* mantiene cards blancas para destacar contenido */
+  
+  --primary: #ff7bac;  /* rosa vivo para botones y links */
+  --accent: #ffc7d2;   /* rosa claro para hover, detalles y acentos */
+  
+  --radius: 16px; 
+  --shadow: 0 10px 20px rgba(0,0,0,.08);  /* sombra más ligera para suavidad */
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--card, #fff);
+  border: 1px solid #eee;
+  border-radius: var(--radius, 16px);
+  overflow: hidden;
+  box-shadow: var(--shadow, 0 4px 14px rgba(0, 0, 0, .06));
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s ease;
+  
+  /* 👇 Hace que todo dentro se ordene verticalmente */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 400px; /* Altura reducida ya que no hay botones */
+  height: 400px; /* Altura fija para consistencia */
+  opacity: 1;
+  visibility: visible;
+  
+  /* Animación de entrada */
+  animation: cardSlideIn 0.6s ease-out;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0,0,0,.16);
+}
+
+/* Animación escalonada para las cards */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Contenedor de imágenes - altura suficiente para imágenes SVG grandes */
+.image-container {
+  width: 100%;
+  height: 250px; /* altura suficiente para imágenes SVG de 350px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Mantiene estructura uniforme */
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0; /* No se encoge, mantiene altura fija */
+}
+
+/* Imágenes de proyectos - llenan el contenedor - Sobrescribe estilos globales */
+.projects .card .project-image {
+  width: 100% !important;        /* Llena todo el ancho del contenedor */
+  height: 100% !important;       /* Llena toda la altura del contenedor */
+  object-fit: cover !important;   /* Llena el contenedor y recorta lo que sobresale */
+  border-radius: 8px;             /* Bordes redondeados suaves */
+  transition: transform 0.3s ease; /* Efecto hover suave */
+  display: block;                 /* Para centrado con margin */
+  max-width: none !important;      /* Sin límite de ancho */
+  max-height: none !important;    /* Sin límite de alto */
+  position: static !important;    /* Sobrescribe position: absolute del global */
+  top: auto !important;           /* Sobrescribe top del global */
+  left: auto !important;          /* Sobrescribe left del global */
+  transform: none !important;     /* Sobrescribe transform del global */
+}
+
+/* Iconos SVG - llenan el contenedor - Sobrescribe estilos globales */
+.projects .card .icon-svg {
+  width: 100% !important;        /* Llena todo el ancho del contenedor */
+  height: 100% !important;       /* Llena toda la altura del contenedor */
+  object-fit: cover !important;   /* Llena el contenedor y recorta lo que sobresale */
+  border-radius: 8px;             /* Bordes redondeados suaves */
+  transition: transform 0.3s ease; /* Efecto hover suave */
+  display: block;                 /* Para centrado con margin */
+  max-width: none !important;      /* Sin límite de ancho */
+  max-height: none !important;    /* Sin límite de alto */
+  position: static !important;    /* Sobrescribe position: absolute del global */
+  top: auto !important;           /* Sobrescribe top del global */
+  left: auto !important;          /* Sobrescribe left del global */
+  transform: none !important;     /* Sobrescribe transform del global */
+}
+
+/* Efecto hover para todas las imágenes */
+.project-image:hover,
+.icon-svg:hover {
+  transform: scale(1.05);  /* Crece un poquito al pasar mouse */
+}
+
+/* Fallback para imágenes que no cargan */
+.image-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  color: var(--muted, #a68787);
+  border-radius: 8px;
+}
+
+.image-fallback i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-fallback span {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* importante para ocupar todo el espacio disponible */
+  padding: 1rem;
+  min-height: 120px; /* Altura reducida ya que no hay botones */
+  justify-content: space-between; /* Distribuye el contenido con espacio entre elementos */
+}
+
+/* Contenedor para el contenido superior */
+.card-content {
+  flex: 1; /* Ocupa el espacio disponible */
+}
+
+/* Contenedor para stack y botones - siempre al final */
+.card-footer {
+  margin-top: auto; /* Empuja al final */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.card-body .links {
+  display: flex;
+  gap: 0.5rem;       /* espacio entre botones */
+}
+
+.card-footer .pill {
+  margin-top: 0; /* Sin margen superior ya que está en el footer */
+}
+
+.card-body h3 {
+  margin: .2rem 0;
+  font-size: 1.05rem;
+  color: var(--text, #4d3a3a);
+  font-weight: 600;
+}
+
+.card-content .stack {
+  font-size: .9rem;
+  color: var(--muted, #a68787);
+  margin: 0.5rem 0;
+}
+
+/* ====== Dark Mode Styles ====== */
+[data-theme="dark"] .filter-btn {
+  border-color: var(--primary, #ff7bac);
+  color: var(--primary, #ff7bac);
+}
+
+[data-theme="dark"] .filter-btn:hover {
+  background: var(--primary, #ff7bac);
+  color: white;
+}
+
+[data-theme="dark"] .filter-btn.active {
+  background: var(--primary, #ff7bac);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.4);
+}
+
+[data-theme="dark"] .loading-state {
+  color: var(--muted, #b0b0b0);
+}
+
+[data-theme="dark"] .spinner {
+  border-color: #4a1a2a;
+  border-top-color: var(--primary, #ff7bac);
+}
+
+[data-theme="dark"] .card {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .image-container {
+  background: #3a1a25;
+  border-bottom: 1px solid #4a1a2a;
+}
+
+[data-theme="dark"] .card-body h3 {
+  color: var(--text, #e8e8e8);
+}
+
+[data-theme="dark"] .card-content .stack {
+  color: var(--muted, #b0b0b0);
+}
+
+[data-theme="dark"] .pill {
+  background: #3a1a25;
+  border: 1px solid #4a1a2a;
+  color: #ffb3c1;
+}
+
+[data-theme="dark"] .pill:hover {
+  background: #4a1a2a;
+  border-color: #ff7bac;
+  color: #ffc7d2;
+}
+
+.pill {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  background: var(--accent, #ffc7d2);
+  border: 1px solid var(--grad-d, #ffb3c1);
+  font-weight: 700;
+  color: var(--text, #4d3a3a);
+  font-size: 0.8rem;
+  width: auto; /* Tamaño del contenido */
+  max-width: none; /* Sin límite de ancho */
+}
+
+/* Pill específico para el footer (stack) */
+.card-footer .pill:first-child {
+  margin-top: 0; /* Sin margen superior para el primer pill del footer */
+  margin-bottom: 0.5rem; /* Margen inferior para separar de los botones */
+  text-align: center; /* Centra el texto dentro del pill */
+  width: auto; /* Se ajusta al contenido del texto */
+  display: inline-block; /* Permite que se ajuste al contenido */
+}
+
+/* ====== Modal Styles ====== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0,0,0,.65);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal .box {
+  background: var(--card, #fff);
+  border-radius: var(--radius, 16px);
+  max-width: 600px; /* Reducido para mejor proporción con imágenes más pequeñas */
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 1px solid #eee;
+}
+
+[data-theme="dark"] .modal .box {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.box-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: #f8f9fa;
+}
+
+[data-theme="dark"] .box-head {
+  border-bottom: 1px solid #4a1a2a;
+  background: linear-gradient(135deg, #2d2d2d, #3a1a25);
+}
+
+.box-head h3 {
+  margin: 0;
+  color: var(--text, #4d3a3a);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .box-head h3 {
+  color: #e0e0e0 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.close {
+  border: 0;
+  background: #f2f2f7;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .close {
+  background: #4a1a2a;
+  color: #e8e8e8;
+  border: 2px solid #5a1a2f;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.close:hover {
+  background: #e5e5ea;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .close:hover {
+  background: #ff7bac;
+  color: #fff;
+  border-color: #ff7bac;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.4);
+}
+
+.box-body {
+  padding: 1.5rem;
+}
+
+.box-body img {
+  width: 100%;         /* Ocupa todo el ancho del contenedor */
+  height: 300px;       /* Altura fija para consistencia */
+  max-width: 100%;     /* No más grande que el contenedor */
+  max-height: none;    /* Sin límite de altura */
+  object-fit: cover;   /* Llena el contenedor como en las cards */
+  border-radius: 8px;
+  margin: 0 auto 1rem auto; /* Centrado horizontalmente */
+  display: block;      /* Para que funcione el margin auto */
+  transition: transform 0.3s ease; /* Efecto hover suave */
+}
+
+.box-body img:hover {
+  transform: scale(1.02); /* Efecto hover suave */
+}
+
+.box-body p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.box-body .muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.box-body .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.6rem 1rem;
+  background: var(--primary, #ff7bac);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.box-body .btn:hover {
+  background: var(--grad-c, #ff7b9c);
+}
+
+.box-body .btn.demo {
+  background: #007bff;
+}
+
+.box-body .btn.demo:hover {
+  background: #0056b3;
+}
+
+/* ====== Base Styles from Original CSS ====== */
+
+/* Card hover effects with sparkle */
+.card {
+  position: relative; /* para que aparezcan los iconos en hover */
+}
+
+.card:hover::after {
+  content: "✨"; 
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.2rem;
+  animation: brillar 1s ease-in-out infinite alternate;
+}
+
+@keyframes brillar {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/* Links styling for cards */
+.card .links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card .links .pill {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--accent, #ffc7d2);
+  border: 1px solid var(--grad-d, #ffb3c1);
+  font-weight: 600;
+  color: var(--text, #4d3a3a);
+  transition: background 0.3s;
+}
+
+.card .links .pill:hover {
+  background: var(--grad-d, #ffb3c1);
+}
+
+.card .links .demo {
+  background: var(--grad-a, #ffccd9);
+  border-color: var(--grad-b, #ff99b2);
+  color: var(--text, #4d3a3a);
+}
+
+.card .links .demo:hover {
+  background: var(--grad-b, #ff99b2);
+}
+
+/* Responsive image adjustments */
+@media (max-width: 500px) {
+  .card .project-image,
+  .card .icon-svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .card {
+    max-height: none;
+  }
+  
+  .modal .box {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+  
+  .box-body {
+    padding: 1rem;
+  }
+  
+  .box-body img {
+    width: 100%;         /* Ocupa todo el ancho en móviles también */
+    height: 250px;       /* Altura reducida para móviles */
+    max-width: 100%;
+    max-height: none;
+  }
+}
+

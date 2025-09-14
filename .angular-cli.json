@@ -1,0 +1,9 @@
+{
+  "defaults": {
+    "serve": {
+      "port": 4200,
+      "host": "localhost"
+    }
+  }
+}
+

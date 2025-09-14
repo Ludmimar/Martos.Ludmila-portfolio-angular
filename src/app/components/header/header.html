@@ -1,0 +1,58 @@
+<header>
+  <div class="petal-container"></div>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <img src="assets/img/cherry-blossom.png" alt="Flor de cerezo" class="icon-yarn" /> 
+        Ludmila Martos
+      </div>
+      <!-- Controles del header -->
+      <div class="header-controls">
+        <!-- Botón de tema para desktop -->
+        <div class="desktop-theme-toggle">
+          <app-theme-toggle></app-theme-toggle>
+        </div>
+        <!-- Botón hamburguesa -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" [class.open]="isMenuOpen" (click)="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks" [class.active]="isMenuOpen">
+        <li><a href="#historia" (click)="closeMenu()">Historia</a></li>
+        <li><a href="#skills" (click)="closeMenu()">Superpoderes</a></li>
+        <li><a href="#proyectos" (click)="closeMenu()">Proyectos</a></li>
+        <li><a href="#futuro" (click)="closeMenu()">Futuro</a></li>
+        <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
+        <li class="theme-toggle-item">
+          <app-theme-toggle></app-theme-toggle>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Sección Hero integrada en el header -->
+    <div class="hero">
+      <img src="assets/img/profile.png" alt="Foto de Ludmila" class="profile" />
+      <h1>De conectar con personas a conectar con tecnología</h1>
+      <p>
+        Vengo del mundo de <strong>ventas y atención al cliente</strong>, donde aprendí a escuchar y adaptarme rápido.
+        Hoy vuelvo a mi primer amor: la <em>programación</em>. Me inspiran el <strong>anime</strong>
+        <img src="assets/img/estrella-alada1.png" alt="Estrella alada" class="icon-yarn" />, las <em>flores de cerezo</em> 
+        <img src="assets/img/cherry-blossom.png" alt="Flor de cerezo" class="icon-yarn" /> y el <strong>tejido a crochet</strong>
+        <img src="assets/img/yarn.png" alt="Ovillo de lana" class="icon-yarn" />, y quiero que mi código también refleje esa pasión y dedicación.
+      </p>
+      <div class="buttons">
+        <a id="downloadBtn" class="btn" (click)="downloadCV()">
+          <i class="fa-solid fa-download"></i> Descargar CV
+        </a>
+        <a class="btn" href="https://github.com/Ludmimar" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/ludmimar89" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

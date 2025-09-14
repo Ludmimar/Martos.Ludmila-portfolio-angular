@@ -1,0 +1,80 @@
+/* ====== App Container ====== */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* Asegurar que el footer esté al final */
+.app-container main {
+  flex: 1;
+}
+
+/* Asegurar que header y footer no se dupliquen */
+.app-container app-header {
+  position: relative;
+  z-index: 10;
+}
+
+.app-container app-footer {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+}
+
+/* Prevenir que el router-outlet cause problemas de layout */
+router-outlet {
+  display: block;
+  min-height: 0;
+}
+
+/* Asegurar que el router-outlet no duplique contenido */
+router-outlet + * {
+  display: none !important;
+}
+
+/* ====== Global Layout Fixes ====== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+/* Asegurar que no haya elementos flotantes que causen problemas */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevenir duplicación de elementos */
+.app-container::after,
+.app-container::before {
+  content: none;
+}
+
+/* Asegurar que solo haya un header visible */
+.app-container header {
+  display: block !important;
+}
+
+/* Prevenir que elementos se dupliquen después del footer */
+.app-container + * {
+  display: none !important;
+}
+
+/* ====== Scroll to Top Button Positioning ====== */
+/* Los estilos del botón scroll to top están definidos en styles.scss */
+
+/* ====== Responsive Layout ====== */
+@media (max-width: 768px) {
+  .app-container {
+    min-height: 100vh;
+  }
+}

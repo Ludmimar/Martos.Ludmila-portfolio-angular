@@ -1,0 +1,27 @@
+/* ====== Future Component Styles ====== */
+
+/* Dark Mode Styles */
+[data-theme="dark"] .goal {
+  background: var(--card, #2d2d2d);
+  border: 1px solid #4a1a2a;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .goal h3,
+[data-theme="dark"] .goal p {
+  color: var(--text, #e8e8e8);
+}
+
+/* Animaciones mejoradas para las metas */
+.goal {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] .goal:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}

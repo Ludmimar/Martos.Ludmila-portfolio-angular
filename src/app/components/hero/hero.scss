@@ -1,0 +1,55 @@
+/* ====== Hero Component Styles ====== */
+.hero {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem 0 3rem 0;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+/* Asegurar que no haya duplicación del hero */
+.hero:not(:first-of-type) {
+  display: none !important;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffb3c1;
+  box-shadow: 0 4px 12px rgba(255, 179, 193, 0.3);
+  transform: scale(.9);
+  opacity: 0;
+  animation: pop 900ms .4s forwards;
+}
+
+[data-theme="dark"] .profile {
+  border: 4px solid #ff7bac;
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.4);
+}
+
+@keyframes pop {
+  to { transform: scale(1); opacity: 1; }
+}
+
+.hero h1 {
+  margin: .75rem 0 0 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+}
+
+.hero p {
+  max-width: 680px;
+  margin: .5rem auto 1rem auto;
+  opacity: .95;
+}
+
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin-top: .5rem;
+}
