@@ -75,13 +75,12 @@ export class ProjectService {
       githubLink: "https://github.com/Ludmimar/ISSD/tree/main/Programacion%201/Coloquio%20Promocional"
     },
     {
-      id: 5,
-      title: "Java Digitalers",
-      description: "Proyectos realizados durante el cursado del programa FullStack Java",
-      stack: "Java · Spring · HTML · CSS · JS",
-      image: "assets/img/java.png",
-      githubLink: "https://github.com/Ludmimar/Java-Digitalers/tree/main/Mod03-Proyecto%20Integrador%20Etapa%201%20-%2002",
-      demoLink: "https://fintech-banco.netlify.app"
+     id: "5",
+    title: "Java Digitalers",
+    description: "Repositorio del Curso Java Fullstack & Desarrollo Web.",
+    stack: "Java · Spring · HTML · CSS · JS",
+    link: "https://github.com/Ludmimar/Digitalers-Java-Developer-Telecom",
+    image: "https://raw.githubusercontent.com/Ludmimar/Portfolio_Martos_Ldmila/8756fdf4509c5b8d43d37d0eda08e6ad06e1a1bc/img/java-original.svg"
     },
     {
       id: 6,
