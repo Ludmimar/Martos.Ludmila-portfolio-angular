@@ -79,7 +79,7 @@ export class ProjectService {
     title: "Java Digitalers",
     description: "Repositorio del Curso Java Fullstack & Desarrollo Web.",
     stack: "Java · Spring · HTML · CSS · JS",
-    link: "https://github.com/Ludmimar/Martos.Ludmila-portfolio-angular",
+    link: "https://github.com/Ludmimar/Digitalers-Java-Developer-Telecom",
     image: "https://raw.githubusercontent.com/Ludmimar/Portfolio_Martos_Ldmila/8756fdf4509c5b8d43d37d0eda08e6ad06e1a1bc/img/java-original.svg"
     },
     {
