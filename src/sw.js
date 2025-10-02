@@ -19,10 +19,13 @@ const staticAssets = [
   '/assets/img/incubadora.png',
   '/assets/img/conversor.png',
   '/assets/img/beauty.jpg',
-  '/assets/img/Python-Emblem.png',
   '/assets/img/java.png',
-  '/assets/img/salusjpg.jpg',
+  '/assets/img/salus.jpg',
   '/assets/img/encriptador.jpg',
+  '/assets/img/Issd.jpg',
+  '/assets/img/knitting.png',
+  '/assets/img/icono-ovillo.png',
+  '/assets/img/sequelize-logo.png',
   '/assets/files/cv-Martos.Ludmila.pdf'
 ];
 
