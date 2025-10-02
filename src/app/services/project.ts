@@ -75,7 +75,7 @@ export class ProjectService {
       githubLink: "https://github.com/Ludmimar/ISSD/tree/main/Programacion%201/Coloquio%20Promocional"
     },
     {
-     id: "5",
+     id: 5,
     title: "Java Digitalers",
     description: "Repositorio del Curso Java Fullstack & Desarrollo Web.",
     stack: "Java · Spring · HTML · CSS · JS",
