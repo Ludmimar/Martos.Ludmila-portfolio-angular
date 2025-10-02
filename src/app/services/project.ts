@@ -59,6 +59,14 @@ export class ProjectService {
     },
     {
       id: 3,
+      title: "Java Digitalers",
+      description: "Repositorio del Curso Java Fullstack & Desarrollo Web.",
+      stack: "Java · Spring · HTML · CSS · JS",
+      image: "https://raw.githubusercontent.com/Ludmimar/Portfolio_Martos_Ldmila/8756fdf4509c5b8d43d37d0eda08e6ad06e1a1bc/img/java-original.svg",
+      githubLink: "https://github.com/Ludmimar/Digitalers-Java-Developer-Telecom"
+    },
+    {
+      id: 4,
       title: "Beauty Shop",
       description: "Página de belleza desarrollada para practicar la implementación de un carrito de compras dinámico.",
       stack: "HTML · CSS · JS",
@@ -67,20 +75,12 @@ export class ProjectService {
       demoLink: "https://ludmila-martos-beauty.netlify.app/"
     },
     {
-      id: 4,
+      id: 5,
       title: "Gestión de Notas de Alumnos",
       description: "El programa permite cargar alumnos, calcular promedios, asignar condiciones y realizar búsquedas y modificaciones de notas de forma interactiva con la consola.",
       stack: "Python",
       image: "assets/img/Python-Emblem.png",
       githubLink: "https://github.com/Ludmimar/ISSD/tree/main/Programacion%201/Coloquio%20Promocional"
-    },
-    {
-     id: 5,
-    title: "Java Digitalers",
-    description: "Repositorio del Curso Java Fullstack & Desarrollo Web.",
-    stack: "Java · Spring · HTML · CSS · JS",
-    githubLink: "https://github.com/Ludmimar/",
-    image: "https://raw.githubusercontent.com/Ludmimar/Portfolio_Martos_Ldmila/8756fdf4509c5b8d43d37d0eda08e6ad06e1a1bc/img/java-original.svg"
     },
     {
       id: 6,

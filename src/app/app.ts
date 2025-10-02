@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Header } from './components/header/header';
 import { PetalAnimationComponent } from './components/petal-animation/petal-animation';
@@ -20,7 +19,6 @@ import { environment } from '../environments/environment';
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    RouterOutlet,
     ReactiveFormsModule,
     Header,
     PetalAnimationComponent,
