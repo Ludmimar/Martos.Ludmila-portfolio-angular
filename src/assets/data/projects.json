@@ -91,7 +91,7 @@
       "stack": "HTML · CSS · JS",
       "image": "assets/img/salus.jpg",
       "githubLink": "https://github.com/Ludmimar/CodoaCodo-Grupo01",
-      "demoLink": "https://ludmimar.github.io/CodoaCodo-Grupo01",
+      "demoLink": "https://instituto-salus.netlify.app/",
       "featured": false,
       "category": "frontend",
       "technologies": ["HTML", "CSS", "JavaScript"],
