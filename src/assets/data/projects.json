@@ -12,7 +12,7 @@
       "category": "backend",
       "technologies": ["Java", "Python"],
       "status": "in progress",
-      "date": "2023-12-05"
+      "date": "2025-10-01"
     },
     {
       "id": 2,
@@ -44,17 +44,17 @@
     },
     {
       "id": 4,
-      "title": "Conversor de Moneda",
-      "description": "App en Java orientada a objetos para practicar lógica y POO.",
-      "stack": "Java · POO",
-      "image": "assets/img/conversor.png",
-      "githubLink": "https://github.com/Ludmimar/DesafioConversorDeMoneda",
+      "title": "Sistema de Gestión Educativa",
+      "description": "Sistema integral de gestión educativa desarrollado en Java con arquitectura MVC, que permite administrar estudiantes, profesores, cursos, inscripciones, correlatividades, aulas y períodos académicos.",
+      "stack": "Java · Servlets · JSP · MySQL · Maven · Tomcat . HTML · CSS · JS",
+      "image": "assets/img/Sist-Gestion-Educ.png  ",
+      "githubLink": "https://github.com/Ludmimar/Digitalers-Java-Developer-Telecom/tree/main/PROYECTOS-FINALES/PROYECTO-FINAL-SISTEMA-EDUCATIVO-02",
       "demoLink": null,
       "featured": false,
-      "category": "backend",
-      "technologies": ["Java", "POO"],
+      "category": "fullstack",
+      "technologies": ["Java", "Servlets", "JSP", "MySQL", "Maven", "Tomcat", "HTML", "CSS", "JavaScript"],
       "status": "completed",
-      "date": "2023-11-20"
+      "date": "2025-10-21"
     },
     {
       "id": 5,
@@ -139,6 +139,20 @@
       "technologies": ["Java", "SpringBoot", "MySQL", "REST API"],
       "status": "completed",
       "date": "2024-03-01"
+    },
+    {
+      "id": 11,
+      "title": "Conversor de Moneda",
+      "description": "App en Java orientada a objetos para practicar lógica y POO.",
+      "stack": "Java · POO",
+      "image": "assets/img/conversor.png",
+      "githubLink": "https://github.com/Ludmimar/DesafioConversorDeMoneda",
+      "demoLink": null,
+      "featured": false,
+      "category": "backend",
+      "technologies": ["Java", "POO"],
+      "status": "completed",
+      "date": "2023-11-20"
     }
   ],
   "categories": [
