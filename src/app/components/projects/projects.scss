@@ -455,8 +455,8 @@
 .modal .box {
   background: var(--card, #fff);
   border-radius: var(--radius, 16px);
-  max-width: 600px;
-  /* Reducido para mejor proporción con imágenes más pequeñas */
+  max-width: 480px;
+  /* Reducido un 20% (de 600px) */
   width: 100%;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -482,14 +482,15 @@
 }
 
 .box-body {
-  padding: 1.5rem;
+  padding: 1.2rem;
+  /* Reducido de 1.5rem */
 }
 
 .box-body img {
   width: 100%;
   /* Ocupa todo el ancho del contenedor */
-  height: 300px;
-  /* Altura fija para consistencia */
+  height: 240px;
+  /* Altura reducida un 20% (de 300px) */
   max-width: 100%;
   /* No más grande que el contenedor */
   max-height: none;
