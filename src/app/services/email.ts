@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 @Injectable({
   providedIn: 'root'
@@ -22,16 +22,19 @@ export class EmailService {
         from_email: email,
         message: message,
       });
-      
+
       return { success: true };
     } catch (error: any) {
       console.error('Error sending email:', error);
-      
+
       // Manejar diferentes tipos de errores
       let errorMessage = 'Error al enviar el mensaje';
-      
+
       if (error.status === 400) {
         errorMessage = 'Datos de contacto inválidos';
+      } else if (error.status === 412) {
+        errorMessage = 'Error de configuración en el servicio de envío. Por favor contacta al administrador.';
+        console.error('EmailJS Error: Invalid Grant. Reconnect Gmail service in EmailJS dashboard.');
       } else if (error.status === 429) {
         errorMessage = 'Demasiados intentos. Espera unos minutos';
       } else if (error.status >= 500) {
@@ -39,7 +42,7 @@ export class EmailService {
       } else if (!navigator.onLine) {
         errorMessage = 'Sin conexión a internet';
       }
-      
+
       return { success: false, error: errorMessage };
     }
   }
@@ -49,7 +52,7 @@ export class EmailService {
     if (!name || name.trim().length < 2) return false;
     if (!email || !this.isValidEmail(email)) return false;
     if (!message || message.trim().length < 10) return false;
-    
+
     return true;
   }
 

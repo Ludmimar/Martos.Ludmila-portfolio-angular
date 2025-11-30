@@ -1,67 +1,67 @@
 {
-  "hash": "697145d5",
-  "configHash": "a9817ad8",
-  "lockfileHash": "0dafeec3",
-  "browserHash": "faf861bd",
+  "hash": "7b3fb993",
+  "configHash": "17eb50ee",
+  "lockfileHash": "80c0e9c8",
+  "browserHash": "a991f443",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "4f3e4a03",
+      "fileHash": "acd9661a",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "e9a4b3b6",
+      "fileHash": "9cd1caca",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "83b270ab",
+      "fileHash": "35c75daf",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "c5c66655",
+      "fileHash": "e84b8fbc",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "933c7560",
+      "fileHash": "a4d6db1e",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "07baa4d3",
+      "fileHash": "1535d962",
       "needsInterop": false
     },
-    "emailjs-com": {
-      "src": "../../../../../../node_modules/emailjs-com/es/index.js",
-      "file": "emailjs-com.js",
-      "fileHash": "1944df17",
+    "@emailjs/browser": {
+      "src": "../../../../../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "2d1c4474",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "78731ab7",
+      "fileHash": "87ce60c2",
       "needsInterop": false
     },
     "rxjs/operators": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
       "file": "rxjs_operators.js",
-      "fileHash": "cc7ef096",
+      "fileHash": "7ff2f7f9",
       "needsInterop": false
     },
     "zone.js": {
       "src": "../../../../../../node_modules/zone.js/fesm2015/zone.js",
       "file": "zone__js.js",
-      "fileHash": "2b25a6f6",
+      "fileHash": "8c3f65b6",
       "needsInterop": true
     }
   },

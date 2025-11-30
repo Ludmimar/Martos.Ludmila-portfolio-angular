@@ -71,6 +71,31 @@
   border: 1px solid #f5c6cb;
 }
 
+/* Button styles */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary, #ff7bac);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background: var(--grad-c, #ff7b9c);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.3);
+}
+
+[data-theme="dark"] button[type="submit"]:hover {
+  box-shadow: 0 4px 12px rgba(255, 123, 172, 0.5);
+}
+
 /* Button disabled state */
 button:disabled {
   opacity: 0.6;
@@ -101,11 +126,12 @@ button:focus {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
+
   .form-group input,
   .form-group textarea {
     border-width: 3px;
   }
-  
+
   .field-error {
     font-weight: bold;
   }
@@ -113,6 +139,7 @@ button:focus {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .form-group input,
   .form-group textarea {
     transition: none;
@@ -182,6 +209,7 @@ button:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
+
   .form-group input,
   .form-group textarea {
     padding: 0.7rem;
