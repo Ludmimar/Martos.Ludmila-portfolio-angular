@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import emailjs from '@emailjs/browser';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import emailjs from '@emailjs/browser';
 export class EmailService {
 
   constructor() {
-    emailjs.init("VKK1bOMx-UIll-q1F");
+    emailjs.init(environment.emailjs.publicKey);
   }
 
   async sendEmail(name: string, email: string, message: string): Promise<{ success: boolean; error?: string }> {
@@ -17,11 +18,15 @@ export class EmailService {
         return { success: false, error: 'Datos de contacto inválidos' };
       }
 
-      await emailjs.send("service_71n6aof", "template_fbyizub", {
-        from_name: name,
-        from_email: email,
-        message: message,
-      });
+      await emailjs.send(
+        environment.emailjs.serviceId,
+        environment.emailjs.templateId,
+        {
+          from_name: name,
+          from_email: email,
+          message: message,
+        }
+      );
 
       return { success: true };
     } catch (error: any) {
