@@ -57,6 +57,8 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+src/environments/environment.ts
+src/environments/environment.prod.ts
 
 # Logs
 logs
