@@ -20,7 +20,7 @@ export class Header {
 
   downloadCV() {
     const link = document.createElement('a');
-    link.href = '/assets/files/cv-Martos.Ludmila.pdf';
+    link.href = '/assets/files/Martos.LudmilaCV.pdf';
     link.download = 'cv-Martos.Ludmila.pdf';
     document.body.appendChild(link);
     link.click();
