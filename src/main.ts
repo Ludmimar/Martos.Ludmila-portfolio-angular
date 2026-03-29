@@ -1,6 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+// Inject Vercel Speed Insights (client-side only)
+injectSpeedInsights();
 
 // Filtrar errores y warnings de consola no críticos
 const originalConsoleError = console.error;
